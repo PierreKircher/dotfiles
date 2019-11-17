@@ -66,35 +66,35 @@ bindsym $mod+t                      split toggle
 
 bindsym $mod+o                      sticky toggle
 
-
 bindsym $mod+f                      fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle; bar mode toggle
 
 bindsym $mod + h                      focus left
 bindsym $mod + Left                   focus left
-bindsym $mod3 + Shift + Left           resize grow left
+bindsym $mod + Shift + Ctrl + Left    resize grow left
 bindsym $mod + Shift + Left           move left 
 bindsym $mod + Ctrl + Left            move workspace to output left
 bindsym $mod + Ctrl + h               move workspace to output left
 
 bindsym $mod + j                      focus down
 bindsym $mod + Down                   focus down
-bindsym $mod3 + Shift + Down             resize grow down
-bindsym $mod+Shift+Down		          move down
+bindsym $mod + Shift + Ctrl + Down    resize grow down
+bindsym $mod + Shift + Down           move down
+bindsym $mod + Ctrl + Down            move workspacto output down 
+bindsym $mod + Ctrl + j               move workspace to output down
 
-bindsym $mod+Shift+Up		move up
-bindsym $mod+Shift+Right 	move right
+bindsym $mod+k                        focus up
+bindsym $mod + Up                     focus up
+bindsym $mod + Shift + Ctrl + Up      resize grow up
+bindsym $mod + Shift + Up             move up
+bindsym $mod + Ctrl + Up              move workspace to output up
+bindsym $mod + Ctrl + k               move workspace to output up
 
-bindsym $mod+Shift+j                move down 30
-bindsym $mod+Ctrl+j                 move workspace to output down
-
-bindsym $mod+k                      focus up
-bindsym $mod+Shift+k                move up 30
-bindsym $mod+Ctrl+k                 move workspace to output up
-
-bindsym $mod+l                      focus right
-bindsym $mod+Right                  focus right
-bindsym $mod+Shift+l                move right 30
-bindsym $mod+Ctrl+l                 move workspace to output right
+bindsym $mod + l                      focus right
+bindsym $mod + Right                  focus right
+bindsym $mod + Shift + Ctrl + Right   resize grow right
+bindsym $mod + Shift + Right          move right
+bindsym $mod + Ctrl + Right           move workspace to output right
+bindsym $mod + Ctrl + l               move workspace to output right
 
 bindsym $mod+c                      exec --no-startup-id cabl
 
@@ -161,3 +161,4 @@ bindsym $mod+F2		restart
 
 exec_always --no-startup-id ~/.config/polybar/launch_trans.sh &
 exec_always --no-startup-id i3-gnome-pomodoro daemon 3 4 5 --nagbar &
+
