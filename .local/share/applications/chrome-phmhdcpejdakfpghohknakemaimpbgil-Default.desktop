@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=nord
+Exec=chromium --profile-directory=Default --app-id=phmhdcpejdakfpghohknakemaimpbgil
+Icon=chrome-phmhdcpejdakfpghohknakemaimpbgil-Default
+StartupWMClass=crx_phmhdcpejdakfpghohknakemaimpbgil
