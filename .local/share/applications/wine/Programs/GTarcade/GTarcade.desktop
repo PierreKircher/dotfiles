@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=GTarcade
-Exec=env WINEPREFIX="/home/o_0/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/o_0/.wine/dosdevices/c:/users/o_0/Start\\ Menu/Programs/GTarcade/GTarcade.lnk
-Type=Application
-StartupNotify=true
-Comment=GTarcade
-Path=/home/o_0/.wine/dosdevices/c:/users/o_0/Local Settings/Application Data/Gtarcade/app/
-Icon=6135_GTarcade.0
-StartupWMClass=gtarcade.exe
