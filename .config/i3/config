@@ -1,24 +1,4 @@
 # vim: filetype=i3
-# File originally by Luke Smith <https://lukesmith.xyz>
-
-# This config file will use environmental variables such as $BROWSER and $TERMINAL.
-# You can set these variables in ~/.profile or ~/.bash_profile if you have it as below:
-#
-# export FILE="ranger"
-# export TERMINAL="st"
-
-#smart_gaps on
-
-
-#smart_gaps inverse_outer
-
-#hide_edge_borders
-
-
-#smart_borders on
-#smart_borders no_gaps
-
-
 
 # #---Basic Definitions---# #
 for_window [class="^.*"] border pixel 1
