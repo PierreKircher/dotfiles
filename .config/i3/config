@@ -46,32 +46,32 @@ bindsym $mod+t                      split toggle
 
 bindsym $mod+o                      sticky toggle
 
-bindsym $mod+f                      fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle; bar mode toggle
+bindsym $mod3+f                      fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle; bar mode toggle
 
 bindsym $mod + h                      focus left
 bindsym $mod + Left                   focus left
-bindsym $mod + Shift + Ctrl + Left    resize grow left
+bindsym $mod + Shift + Ctrl + Left    resize shrink width 10 px or 10 ppt
 bindsym $mod + Shift + Left           move left 
 bindsym $mod + Ctrl + Left            move workspace to output left
 bindsym $mod + Ctrl + h               move workspace to output left
 
 bindsym $mod + j                      focus down
 bindsym $mod + Down                   focus down
-bindsym $mod + Shift + Ctrl + Down    resize grow down
+bindsym $mod + Shift + Ctrl + Down    resize grow height 10 px or 10 ppt
 bindsym $mod + Shift + Down           move down
-bindsym $mod + Ctrl + Down            move workspacto output down 
+bindsym $mod + Ctrl + Down            move workspace to output down 
 bindsym $mod + Ctrl + j               move workspace to output down
 
 bindsym $mod+k                        focus up
 bindsym $mod + Up                     focus up
-bindsym $mod + Shift + Ctrl + Up      resize grow up
+bindsym $mod + Shift + Ctrl + Up      resize shrink height 10 px or 10 ppt
 bindsym $mod + Shift + Up             move up
 bindsym $mod + Ctrl + Up              move workspace to output up
 bindsym $mod + Ctrl + k               move workspace to output up
 
 bindsym $mod + l                      focus right
 bindsym $mod + Right                  focus right
-bindsym $mod + Shift + Ctrl + Right   resize grow right
+bindsym $mod + Shift + Ctrl + Right   resize grow width 10 px or 10 ppt
 bindsym $mod + Shift + Right          move right
 bindsym $mod + Ctrl + Right           move workspace to output right
 bindsym $mod + Ctrl + l               move workspace to output right
@@ -99,29 +99,24 @@ set $ws10 "10"
 # switch to workspace
 bindsym $mod+1          workspace $ws1
 bindsym $mod+Shift+1    move container to workspace $ws1
-
 bindsym $mod+2          workspace $ws2
 bindsym $mod+Shift+2    move container to workspace $ws2
-
 bindsym $mod+3          workspace $ws3
 bindsym $mod+Shift+3    move container to workspace $ws3
-
-bindsym $mod+4		workspace $ws4
-bindsym $mod+5		workspace $ws5
-bindsym $mod+6		workspace $ws6
-bindsym $mod+7		workspace $ws7
-bindsym $mod+8		workspace $ws8
-bindsym $mod+9		workspace $ws9
-bindsym $mod+0		workspace $ws10
-
-# move focused container to workspace
-bindsym $mod+Shift+4	move container to workspace $ws4
-bindsym $mod+Shift+5	move container to workspace $ws5
-bindsym $mod+Shift+6	move container to workspace $ws6
-bindsym $mod+Shift+7	move container to workspace $ws7
-bindsym $mod+Shift+8	move container to workspace $ws8
-bindsym $mod+Shift+9	move container to workspace $ws9
-bindsym $mod+Shift+0	move container to workspace $ws10
+bindsym $mod+4		      workspace $ws4
+bindsym $mod+Shift+4    move container to workspace $ws4
+bindsym $mod+5		      workspace $ws5
+bindsym $mod+Shift+5    move container to workspace $ws5
+bindsym $mod+6		      workspace $ws6
+bindsym $mod+Shift+6    move container to workspace $ws6
+bindsym $mod+7		      workspace $ws7
+bindsym $mod+Shift+7    move container to workspace $ws7
+bindsym $mod+8		      workspace $ws8
+bindsym $mod+Shift+8    move container to workspace $ws8
+bindsym $mod+9		      workspace $ws9
+bindsym $mod+Shift+9    move container to workspace $ws9
+bindsym $mod+0		      workspace $ws10
+bindsym $mod+Shift+0    move container to workspace $ws0
 
 for_window [class="Pinentry"] sticky enable
 for_window [class="sent"] border pixel 0px
@@ -138,7 +133,10 @@ no_focus [title="mpvfloat"]
 # #---Function Buttons---# #
 bindsym $mod+F2		restart
 
-
 exec_always --no-startup-id ~/.config/polybar/launch_trans.sh &
 exec_always --no-startup-id i3-gnome-pomodoro daemon 3 4 5 --nagbar &
 
+
+assign [class="Skpyeforlinux"] $ws3
+assign [class="Skpye"] $ws3
+assign [class="Chromium"] $ws2

@@ -328,9 +328,9 @@ map <leader>mdt MarkdownPreviewToggle<CR>
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
 " Navigating with guides
-	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	map <leader><leader> <Esc>/<++><Enter>"_c4l
+	inoremap ,, <Esc>/<++><Enter>"_c4l
+	vnoremap ,, <Esc>/<++><Enter>"_c4l
+	map ,, <Esc>/<++><Enter>"_c4l
 
  nmap <silent><leader>c :Commentary<CR>
 
@@ -341,15 +341,15 @@ map <silent><leader>ln :set number! relativenumber!<cr>
 nnoremap <silent><leader>ll :call <SID>ToggleColorColumn()<cr>
 
 " vimling:
-	nm <leader>d :call ToggleDeadKeys()<CR>
-	imap <leader>d <esc>:call ToggleDeadKeys()<CR>a
-	nm <leader>i :call ToggleIPA()<CR>
-	imap <leader>i <esc>:call ToggleIPA()<CR>a
-	nm <leader>q :call ToggleProse()<CR>
+	nm ,.d :call ToggleDeadKeys()<CR>
+	imap ,.d <esc>:call ToggleDeadKeys()<CR>a
+	nm ,.i :call ToggleIPA()<CR>
+	imap ,.i <esc>:call ToggleIPA()<CR>a
+	nm ,.q :call ToggleProse()<CR>
 
 
 " Check file in shellcheck:
-	map <leader>s :!clear && shellcheck %<CR>
+	map ,.s :!clear && shellcheck %<CR>
 
 " Save file as sudo on files that require root permission
 	cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
@@ -374,7 +374,7 @@ let g:go_list_type = "quickfix"
 
 
 nnoremap <Leader>b :b 
-
+nnoremap <Leader>W :w<CR>
 map <silent><C-k> :bnext<CR>
 map <silent><C-j> :bprev<CR>
 map <silent><C-d> :bd<cr>
@@ -456,7 +456,7 @@ endif
 "MARKDOWN
 	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
 	autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
-	autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
+	autocmd Filetype markdown,rmd inoremap ,b ****<Esc>F*hi
 	autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
 	autocmd Filetype markdown,rmd inoremap ,e **<++><Esc>F*i
 	autocmd Filetype markdown,rmd inoremap ,h ====<Space><++><Esc>F=hi
